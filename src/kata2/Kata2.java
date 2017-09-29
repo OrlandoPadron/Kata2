@@ -6,12 +6,13 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        int[] data = {1,1,-3,7,7,7,2};
+        //Ya no podemos trabajar con tipos primitivos(int), así que usamos Integer.
+        String[] data = {"Luisa","Luisa", "Pepe", "Rosa", "Rosa", "Rosa"};
         
         Histogram histo = new Histogram(data); 
-        Map<Integer,Integer> histogr = histo.getHistogram(); 
+        Map<String,Integer> histogr = histo.getHistogram(); 
         
-        for (int key : histogr.keySet()){
+        for (String key : histogr.keySet()){
             System.out.println(key + " --> " + histogr.get(key));
         }
              
